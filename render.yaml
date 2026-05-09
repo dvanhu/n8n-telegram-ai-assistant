@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: n8n-telegram-bot
+    env: docker
+    plan: free
+
+    envVars:
+      - key: N8N_HOST
+        value: n8n-telegram-bot.onrender.com
+
+      - key: N8N_PROTOCOL
+        value: https
+
+      - key: WEBHOOK_URL
+        value: https://n8n-telegram-bot.onrender.com/
+
+      - key: GENERIC_TIMEZONE
+        value: Asia/Kolkata
+
+      - key: N8N_SECURE_COOKIE
+        value: false
+
+      - key: N8N_RUNNERS_ENABLED
+        value: true
+
+      - key: N8N_ENCRYPTION_KEY
+        value: your-super-secret-key
+
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: true
+
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: yourpassword123
